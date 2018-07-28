@@ -8,7 +8,7 @@ exports.sleep = sleep;
 
 function sleep(delay) {
     return new Promise((resolve) => setTimeout(resolve, delay));
-};
+}
 
 // Wraps a promise so that it rejects if not resolved within specified timeout
 exports.withTimeout = function withTimeout(promise, timeout) {
@@ -41,7 +41,7 @@ exports.withTimeout = function withTimeout(promise, timeout) {
             }
         }
     }
-}
+};
 
 // Wraps a promise such that if the promise rejects, an exception with a
 // nice stack trace is thrown.
@@ -108,7 +108,7 @@ exports.genRetry = function * genRetry(genFunc, args, options) {
             yield sleep(delayMs);
         }
     }
-}
+};
 
 // Given an object and an array of property names, will remove any object
 // property whose name is found in the array.
@@ -116,11 +116,11 @@ exports.deletePrivateFields = function deletePrivateFields(object, privateFields
     for (let field of privateFields) {
         delete object[field];
     }
-}
+};
 
 exports.promWaitEndOfStream =  function promWaitEndOfStream(input) {
     return new Promise((resolve, reject) => {
         input.once('end', () => resolve());
         input.once('error', err => reject(err));
     });
-}
+};
