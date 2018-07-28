@@ -1,0 +1,19 @@
+{
+  "name": "qbert-utils",
+  "version": "1.0.0",
+  "author": "The Qbert-Utils Developers",
+  "contributors": [
+    {
+      "name": "The Qbert-Utils Developers",
+      "email": "dev@platform9.com"
+    }
+  ],
+  "description": "A collection of node.js/Javascript utilities",
+  "engines": {
+    "node": ">=4.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/platform9/qbert-utils.git"
+  }
+}
